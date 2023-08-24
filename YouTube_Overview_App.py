@@ -23,6 +23,7 @@ st.image(logo_path, width=150, use_container_width=False, caption="YouTube Logo"
 #    logo_image = base64.b64encode(logo_file.read()).decode()
 
 # Display the logo on the main page using HTML and CSS
+# Display the header with the logo
 st.markdown(
     f"""
     <style>
@@ -37,8 +38,8 @@ st.markdown(
         }}
     </style>
     <div class="logo-container">
-        <img class="logo-img" src="data:image/png;base64,{logo_image}" alt="YouTube Logo">
-                           <h1>YouTube Channel Information</h1>
+        <img class="logo-img" src="{logo_path}" alt="YouTube Logo">
+        <h1>YouTube Channel Information</h1>
     </div>
     """,
     unsafe_allow_html=True
