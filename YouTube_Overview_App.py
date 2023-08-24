@@ -23,27 +23,6 @@ logo_path = "https://raw.githubusercontent.com/M16051997/streamlit-example/maste
 # Display the YouTube logo
 st.image(logo_path, width=150, caption="YouTube Logo")
 
-# Display the header with the logo
-st.markdown(
-    f"""
-    <style>
-        .logo-container {{
-            display: flex;
-            align-items: center;
-            padding-left: 20px;
-        }}
-        .logo-img {{
-            width: 250px;
-            margin-right: 50px;
-        }}
-    </style>
-    <div class="logo-container">
-        <img class="logo-img" src="{logo_path}" alt="YouTube Logo">
-        <h1>YouTube Channel Information</h1>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
 
 
 
