@@ -21,7 +21,7 @@ logo_path = "https://raw.githubusercontent.com/M16051997/streamlit-example/maste
 #    logo_image = base64.b64encode(logo_file.read()).decode()
 
 # Display the YouTube logo
-st.image(logo_path, width=150, caption="YouTube Logo")
+# st.image(logo_path, width=150, caption="YouTube Logo")
 
 
 
