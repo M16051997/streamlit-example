@@ -93,6 +93,20 @@ if channel_ids:
     # Display the Plotly figure using st.plotly_chart()
     st.plotly_chart(fig)
 
+    # Create a bar plot with different colors for each channel using Plotly
+    channel_df['Total_Videos'] = channel_df['Total_Videos'].apply(int)
+    fig1 = px.bar(channel_df, x='Channel_name', y='Total_Videos', title='Total Videos by Channel', color='Channel_name')
+    
+    # Display the Plotly figure using st.plotly_chart()
+    st.plotly_chart(fig1)
+
+    # Create a bar plot with different colors for each channel using Plotly
+    channel_df['Views'] = channel_df['Views'].apply(int)
+    fig2 = px.bar(channel_df, x='Channel_name', y='Views', title='Total Views by Channel', color='Channel_name')
+    
+    # Display the Plotly figure using st.plotly_chart()
+    st.plotly_chart(fig2)
+
     # Download data as Excel
     # ...
 
