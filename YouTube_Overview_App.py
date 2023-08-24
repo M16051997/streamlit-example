@@ -15,7 +15,7 @@ from PIL import Image  # Import PIL library for working with images
 st.set_page_config(page_title="YouTube Channel Data Information", page_icon=":bar_chart:")
 
 # Load logo image
-logo_path = "https://github.com/M16051997/streamlit-example/blob/master/YouTube-logo.png"
+logo_path = "https://raw.githubusercontent.com/M16051997/streamlit-example/master/YouTube-logo.png"
 with open(logo_path, "rb") as logo_file:
     logo_image = base64.b64encode(logo_file.read()).decode()
 
