@@ -14,14 +14,30 @@ from PIL import Image  # Import PIL library for working with images
 # Streamlit app
 st.set_page_config(page_title="YouTube Channel Data Information", page_icon=":bar_chart:")
 
-# Load logo image
-logo_path = "https://raw.githubusercontent.com/M16051997/streamlit-example/master/YouTube-logo.png"
+# Load logo image URL
+logo_url = "https://raw.githubusercontent.com/M16051997/streamlit-example/master/YouTube-logo.png"
 
-# with open(logo_path, "rb") as logo_file:
-#    logo_image = base64.b64encode(logo_file.read()).decode()
-
-# Display the YouTube logo
-# st.image(logo_path, width=150, caption="YouTube Logo")
+# Display the header with the logo
+st.markdown(
+    f"""
+    <style>
+        .logo-container {{
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }}
+        .logo-img {{
+            width: 250px;
+            margin-right: 50px;
+        }}
+    </style>
+    <div class="logo-container">
+        <img class="logo-img" src="{logo_url}" alt="YouTube Logo">
+        <h1>YouTube Channel Information</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 
 
