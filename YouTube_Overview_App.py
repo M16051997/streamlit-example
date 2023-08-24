@@ -16,8 +16,11 @@ st.set_page_config(page_title="YouTube Channel Data Information", page_icon=":ba
 
 # Load logo image
 logo_path = "https://raw.githubusercontent.com/M16051997/streamlit-example/master/YouTube-logo.png"
-with open(logo_path, "rb") as logo_file:
-    logo_image = base64.b64encode(logo_file.read()).decode()
+# Display the YouTube logo
+st.image(logo_path, width=150, use_container_width=False, caption="YouTube Logo")
+
+# with open(logo_path, "rb") as logo_file:
+#    logo_image = base64.b64encode(logo_file.read()).decode()
 
 # Display the logo on the main page using HTML and CSS
 st.markdown(
