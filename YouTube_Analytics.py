@@ -154,6 +154,29 @@ if channel_ids:
     st.header("Channel Information:--")
     # Display the Markdown table
     st.markdown(markdown_table)
+
+    # Create a bar plot with different colors for each channel using Plotly
+    channel_df['Subscribers'] = channel_df['Subscribers'].apply(int)
+    fig10 = px.bar(channel_df, x='Channel_name', y='Subscribers', title='Subscribers by Channel', color='Channel_name')
+    
+    # Display the Plotly figure using st.plotly_chart()
+    st.plotly_chart(fig10)
+
+    # Create a bar plot with different colors for each channel using Plotly
+    channel_df['Total_Videos'] = channel_df['Total_Videos'].apply(int)
+    fig9 = px.bar(channel_df, x='Channel_name', y='Total_Videos', title='Total Videos by Channel', color='Channel_name')
+    
+    # Display the Plotly figure using st.plotly_chart()
+    st.plotly_chart(fig9)
+
+    # Create a bar plot with different colors for each channel using Plotly
+    channel_df['Views'] = channel_df['Views'].apply(int)
+    fig8 = px.bar(channel_df, x='Channel_name', y='Views', title='Total Views by Channel', color='Channel_name')
+    
+    # Display the Plotly figure using st.plotly_chart()
+    st.plotly_chart(fig8)
+
+    
     
     ds = []
 
@@ -207,8 +230,7 @@ if channel_ids:
     
 
     from datetime import datetime   
-
-    
+        
 
     # Create a bar plot with different colors for each channel using Plotly
     fig = px.bar(filtered_dataset, x='channel', y='Enagement', title='Enagement by Channel', color='channel')
