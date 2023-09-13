@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.express as px
 import base64
 # YouTube API Key
-api_key = 'AIzaSyBKjbT5XWKMZprBSgTZkMyk0-wtSVO7U-Q'
+api_key = 'AIzaSyAixI_LQLTyqoqAowcKXmp3mGkvI3Xuk8Q'
 youtube = build('youtube', 'v3', developerKey=api_key)
 
 from PIL import Image  # Import PIL library for working with images
