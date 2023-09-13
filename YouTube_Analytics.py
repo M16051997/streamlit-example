@@ -3,8 +3,21 @@ from googleapiclient.discovery import build
 import pandas as pd
 import plotly.express as px
 import base64
+
+import json
+
+# Read the API key from a configuration file
+with open('config.json', 'r') as config_file:
+    config = json.load(config_file)
+
+api_key = config.get('YOUTUBE_API_KEY')
+
+if api_key is None:
+    raise ValueError('API key not found in the configuration file.')
+
+
 # YouTube API Key
-api_key = 'AIzaSyAixI_LQLTyqoqAowcKXmp3mGkvI3Xuk8Q'
+# api_key = 'AIzaSyAixI_LQLTyqoqAowcKXmp3mGkvI3Xuk8Q'
 youtube = build('youtube', 'v3', developerKey=api_key)
 
 from PIL import Image  # Import PIL library for working with images
